@@ -3,18 +3,11 @@
 
 
 #include <QFileDialog>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include <QWidget>
-#include <QString>
-#include <QFile>
 #include <QStandardPaths>
 #include <encoded.h>
 #include <string>
-#include <QDebug>
 #include <fstream>
 #include <decoded.h>
-#include <thread>
 
 
 MainWindow::MainWindow(QWidget *parent)
