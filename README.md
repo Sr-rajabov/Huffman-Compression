@@ -4,3 +4,5 @@ To encode, press the "Code" button, to decode, press the "Decode" button.  A com
 
 
    ![MainWindow](Pictures/Screenshot%20From%202024-10-22%2019-28-56.png)
+   
+When encoding, an ".hff" file will be created in the selected directory. During decoding, a ".txt" file will be created in the selected directory
