@@ -19,6 +19,7 @@ git clone https://github.com/Sr-rajabov/Huffman-Compression.git
 cd Haffman-Compression
 chmod u+x Haffman-Compression
 ./Haffman-Compression.exe
+```
 The application starts from the main window. To encode or decode, select the file using the "Open" button. 
 To encode, press the "Code" button, to decode, press the "Decode" button.  A completion indicator is used to monitor progress!
 
