@@ -2,10 +2,11 @@
 
 Description
 
-Open a terminal. Type the following command and hit Enter:
 This is Huffman compression algorithm. Achieved 13-15 MB/sec compression rate
 
 Install Qt 6.5 or higher on Ubuntu
+
+Open a terminal. Type the following command and hit Enter:
 
 ```bash
 sudo apt-get install qt6-default
@@ -23,6 +24,9 @@ chmod u+x Haffman-Compression
 The application starts from the main window. To encode or decode, select the file using the "Open" button. 
 To encode, press the "Code" button, to decode, press the "Decode" button.  A completion indicator is used to monitor progress!
 
+Screenshot
+
+default state
 
    ![MainWindow](Pictures/Screenshot%20From%202024-10-22%2019-28-56.png)
    
