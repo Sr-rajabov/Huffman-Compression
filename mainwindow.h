@@ -24,8 +24,11 @@ private slots:
 
     void on_decoding_clicked();
 
+    void on_format_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString fileName;
+    QMenu *formatMenu;
 };
 #endif // MAINWINDOW_H

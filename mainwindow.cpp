@@ -7,6 +7,7 @@
 #include <encoded.h>
 #include <string>
 #include <fstream>
+#include <QMenu>
 #include <decoded.h>
 
 
@@ -16,6 +17,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->DirectoryPath->setFixedHeight(26);
+
+    formatMenu = new QMenu();
+    // Добавляем форматы в меню
+    formatMenu->addAction(".doc", [&]() { qDebug() << "Выбран формат: .doc"; });
+    formatMenu->addAction(".pdf", [&]() { qDebug() << "Выбран формат: .pdf"; });
+    formatMenu->addAction(".txt", [&]() { qDebug() << "Выбран формат: .txt"; });
+    formatMenu->addAction(".xlsx", [&]() { qDebug() << "Выбран формат: .xlsx"; });
+    ui->format->setFixedWidth(60);
+
 }
 
 MainWindow::~MainWindow()
@@ -68,7 +78,8 @@ void MainWindow::on_decoding_clicked()
         if (pos != std::string::npos) {
             to.erase(pos);
         }
-        to += "Decoded.pdf";
+        to += "Decoded.";
+        to += ui->format->text().toStdString();
         std::ifstream inFile(fileName.toStdString(), std::ifstream::binary);
         std::ofstream outFile(to, std::ofstream::binary);
         decoded(inFile, outFile, ui->progressBar);
@@ -79,4 +90,13 @@ void MainWindow::on_decoding_clicked()
 }
 
 
+
+
+void MainWindow::on_format_clicked()
+{
+    formatMenu->exec(ui->format->mapToGlobal(QPoint(0, ui->format->height())));
+    QObject::connect(formatMenu, &QMenu::triggered, [this](QAction *action) {
+        this->ui->format->setText(action->text());  // Меняем текст кнопки на выбранный формат
+    });
+}
 
