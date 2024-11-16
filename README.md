@@ -1,6 +1,6 @@
-﻿Huffman Compression - Qt Applications
+## ﻿Huffman Compression - Qt Applications
 
-Description
+**Description**
 
 This is Huffman compression algorithm. Achieved 13-15 MB/sec compression rate
 
